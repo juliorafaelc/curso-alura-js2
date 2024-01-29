@@ -50,32 +50,10 @@ function gerarNumeroAleatorio(numeroMaximo) {
     gerarNumeroAleatorio(numeroMaximo)
   } else {
     listaDeNumeros.push(numeroEscolhido)
-    console.log(listaDeNumeros)
   }
   return numeroEscolhido
 
 }
-
-// function sorteiaNumero(numeroMaximo){
-//   var sorteios = [];
-//   var tamanhoArray = 1;
-
-//   while (tamanhoArray <= numeroMaximo) {
-//     var numeroAleatorio = gerarNumeroAleatorio();
-//     var achou = false;
-//     for (var posicao = 0; posicao < sorteios.length; posicao++) {
-//       if (sorteios[posicao] == numeroAleatorio) {
-//         achou = true;
-//         break;
-//       }
-//     }
-//     if (achou == false) {
-//       sorteios.push(numeroAleatorio);
-//       tamanhoArray++;
-//     }
-//   }
-//   return sorteios;
-// }
 
 function limparCampo(){
   chute = document.querySelector("input");
@@ -87,9 +65,7 @@ function reiniciarJogo(){
   limparCampo()
   tentativa = 1
   exibirMensagemInicial()
-  console.log(numeroSecreto)
   document.getElementById("reiniciar").setAttribute("disabled", true)
 }
 
 exibirMensagemInicial()
-console.log(numeroSecreto)
