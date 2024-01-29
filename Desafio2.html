@@ -1,0 +1,80 @@
+<meta charset="UTF-8">
+
+<script>
+  //exercicio 1 - Crie uma função que calcule o índice de massa corporal (IMC) de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas, que serão recebidos como parâmetro.
+  function calculaIMC(peso, altura) {
+    return peso / (altura * altura);
+  }
+  var nome = prompt("Informe o seu nome");
+  var alturaInformada = prompt(nome + ", informe sua altura");
+  var pesoInformado = prompt(nome + ", informe o seu peso");
+  var imc = calculaIMC(pesoInformado, alturaInformada);
+
+  document.write(nome + ", seu IMC é de " + imc);
+  document.write("<br><br>");
+
+  //exercicio 2 - Crie uma função que calcule o valor do fatorial de um número passado como parâmetro.
+  function calcularFatorial(numero) {
+    if (numero === 0 || numero === 1) {
+      return 1;
+    } else {
+      var resultado = 1;
+      for (var i = 2; i <= numero; i++) {
+        resultado *= i;
+      }
+      return resultado;
+    }
+  }
+  console.log(calcularFatorial(5));
+  console.log(calcularFatorial(1));
+  console.log(calcularFatorial(3));
+
+  //exercicio 3 - Crie uma função que converte um valor em dólar, passado como parâmetro, e retorna o valor equivalente em reais. Para isso, considere a cotação do dólar igual a R$4,80.
+  function converterDolarParaReal(valorEmDolar) {
+    var taxaDeConversao = 4.80;
+    return valorEmDolar * taxaDeConversao;
+  }
+  console.log(converterDolarParaReal(10));
+  console.log(converterDolarParaReal(50));
+
+  //exercicio 4 - Crie uma função que mostre na tela a área e o perímetro de uma sala retangular, utilizando altura e largura que serão dadas como parâmetro.
+  function calcularAreaEPerimetro(altura, largura) {
+    var area = altura * largura;
+    var perimetro = 2 * (altura + largura);
+    console.log("Área da sala: " + area + " metros quadrados");
+    console.log("Perímetro da sala: " + perimetro + " metros");
+  }
+  calcularAreaEPerimetro(5, 8);
+
+  //exercicio 5 - Crie uma função que mostre na tela a área e o perímetro de uma sala circular, utilizando seu raio que será fornecido como parâmetro. Considere Pi = 3,14.
+  function calcularAreaEPerimetro(raio) {
+    var pi = 3.14;
+    // Calcula a área
+    var area = pi * raio * raio;
+    // Calcula o perímetro
+    var perimetro = 2 * pi * raio;
+    console.log("Área da sala circular: " + area + " unidades quadradas");
+    console.log("Perímetro da sala circular: " + perimetro + " unidades");
+  }
+  calcularAreaEPerimetro(5);
+
+
+  //exercicio 6 - Crie uma função que mostre na tela a tabuada de um número dado como parâmetro.
+  function pulaLinha() {
+    document.write("<br><br>");
+  }
+
+  function mostra(frase) {
+    document.write("<big>" + frase + "</big>");
+    pulaLinha();
+  }
+
+  var multiplicador = 1;
+  var multiplicando = parseInt(prompt("digite o numero a ser multiplicado"));
+  var limiteMultiplicador = parseInt(prompt("digite ate que numero da tabuada gostaria de saber"));
+
+  while (multiplicador <= limiteMultiplicador) {
+    mostra(multiplicando + "*" + multiplicador + " = " + (multiplicando * multiplicador));
+    multiplicador = multiplicador + 1;
+  }
+</script>

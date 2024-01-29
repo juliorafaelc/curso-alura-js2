@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+
+<script>
+//exercicio 1 - Criar uma função que exibe "Olá, mundo!" no console.
+console.log("Ola, mundo!");
+
+//exercicio 2 - Criar uma função que recebe um nome como parâmetro e exibe "Olá, [nome]!" no console.
+function exibirNomeNoConsole(nome){
+  console.log(`Olá, ${nome}!`);
+}
+var nome = exibirNomeNoConsole("Julio");
+
+//exercicio 3 - Criar uma função que recebe um número como parâmetro e retorna o dobro desse número.
+function dobrarNumeros(valor){
+  return valor + valor;
+}
+var numero = 10;
+var numeroDobrado = dobrarNumeros(numero);
+console.log(`O dobro de ${numero} é ${numeroDobrado}`);
+
+//exercicio 4 - Criar uma função que recebe três números como parâmetros e retorna a média deles.
+function gerarMediaNumeros(valor1, valor2, valor3){
+  return (valor1 + valor2 + valor3) / 3;
+}
+var mediaDosNumeros = gerarMediaNumeros(10, 10, 10);
+console.log(mediaDosNumeros);
+
+//exercicio 5 - Criar uma função que recebe dois números como parâmetros e retorna o maior deles.
+function encontrarMaiorNumero(numero1, numero2) {
+    if (numero1 > numero2) {
+        return numero1;
+    } else {
+        return numero2;
+    }
+}
+var resultado2 = encontrarMaiorNumero(5, 10);
+console.log(resultado2);
+
+//exercicio 6 - Criar uma função que recebe um número como parâmetro e retorna o resultado da multiplicação desse número por ele mesmo
+function multiplicarPorSiMesmo(numero2) {
+    return numero2 * numero2;
+}
+let resultado = multiplicarPorSiMesmo(4);
+console.log(resultado);
+
+</script>
